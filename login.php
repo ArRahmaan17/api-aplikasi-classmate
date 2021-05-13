@@ -1,7 +1,5 @@
 <?php
 
-
-
 	include 'config.php';
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$user = $_POST['user'];
@@ -27,26 +25,24 @@
 		$data = [];
 	
 		if ($cekuser >= 1) {
-			$data['kode'] = 201;
+			$data['kode'] = "201";
 			$data['pesan']  = 'data tersedia' ;
 			$data['data']  = $resultuser ;
 			echo json_encode($data);
 		}else if($cekemail >= 1){
-			$data['kode'] = 201;
+			$data['kode'] = "201";
 			$data['pesan']  = 'data tersedia' ;
 			$data['data']  = $resultemail ;
 			echo json_encode($data);
 		}else{
-			$data['kode'] = 400;
+			$data['kode'] = "400";
 			$data['pesan']  = 'data tidak tersedia' ;
 			echo json_encode($data);
 		}	
 	}else{
-		$data['kode'] = 501;
+		$data['kode'] = "501";
 		$data['pesan']  = 'tidak ada respon server' ;
 		echo json_encode($data);
 	}
 	
-
-
 ?>
