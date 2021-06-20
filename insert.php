@@ -2,14 +2,13 @@
 	include 'config.php';
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$nama = $_POST['nama'];
-		$user = $_POST['user'];
-		$pass = $_POST['pass'];
-		$email = $_POST['email'];
+		$password = $_POST['password'];
 		$kelas = $_POST['kelas'];
-		$alamat = $_POST['alamat'];
+		$namaibu = $_POST['namaibu'];
 		$telepone = $_POST['telepone'];
+		$email = $_POST['email'];
 
-		$query = "INSERT INTO siswa VALUES (null,'$nama', '$user', '$pass', '$email', $kelas, '$alamat', '$telepone')";
+		$query = "INSERT INTO pelajar VALUES (null, '$nama', '$password', $kelas, null, '$namaibu', '$telepone','$email')";
 
 
 		$exec = mysqli_query($konek, $query);
