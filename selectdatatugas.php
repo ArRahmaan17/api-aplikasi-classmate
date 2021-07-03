@@ -3,7 +3,7 @@
 	include 'config.php';
 	if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
-		$query = "SELECT * FROM tugas";
+		$query = "SELECT judul,detail,diupload,nama as gurupengampu FROM tugas INNER JOIN guru;";
 		
 		$exec = mysqli_query($konek, $query);
 

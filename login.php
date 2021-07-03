@@ -6,9 +6,9 @@
 		$pass = $_POST['pass'];
 
 
-		$queryuser = "SELECT * FROM siswa WHERE nama = '$user' AND password = '$pass'";
+		$queryuser = "SELECT * FROM pelajar WHERE nama = '$user' AND password = '$pass'";
 		
-		$queryemail = "SELECT * FROM siswa WHERE email = '$user' AND password = '$pass'";
+		$queryemail = "SELECT * FROM pelajar WHERE email = '$user' AND password = '$pass'";
 
 		$execuser = mysqli_query($konek, $queryuser);
 
